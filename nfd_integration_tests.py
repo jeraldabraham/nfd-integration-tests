@@ -6,12 +6,6 @@ import inspect
 import unittest
 from sets import Set
 
-print sys.path
-cmd_folder = os.path.realpath(os.path.abspath(os.path.split(inspect.getfile( inspect.currentframe() ))[0]))
-print cmd_folder
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"subfolder")))
-print cmd_subfolder
-
 if len(sys.argv) > 1:
     testCases = glob.glob('test_*')
     testTargets = Set([])
